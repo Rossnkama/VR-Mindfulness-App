@@ -1,23 +1,26 @@
-<html>
-  <head>
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
-    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
-    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
-        <a-scene physics>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>VR App</title>
+        <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body class="a-body " data-gr-c-s-loaded="true">
+        <a-scene physcis="" class="fullscreen" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+            <a-plane static-body="sphereRadius:NaN" position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="white" material="" geometry=""></a-plane>
+            <a-sky color="#87ceeb" material="" geometry=""></a-sky>
             <a-assets>
-                <a-asset-item id="mtl" src="./archModel/Portal N181116.mtl"></a-asset-item>
-                <a-asset-item id="obj" src="./somethingElse/model.obj"></a-asset-item>
+                <a-asset-item id="mtl" src="./hallway/materials.mtl"></a-asset-item>
+                <a-asset-item id="obj" src="./hallway/model.obj"></a-asset-item>
             </a-assets>
-                
-            <a-entity obj-model="obj: #obj; mtl: #mtl;"></a-entity>
+            <a-camera id="camera" position="-0.9872499373774682 3.6 -4.074247801439871" cursor-visible="true" cursor-scale="2" cursor-color="#0095DD" cursor-opacity="0.5" rotation="0.3437746770784999 -0.4583662361046077 0" camera="" look-controls="" wasd-controls=""></a-camera>
+            <a-entity id="building" obj-model="obj:./hallway/model.obj;mtl:./hallway/materials.mtl" shadow="receive:false" position="0 4 -5" scale="5 5 5"></a-entity>
+            <a-entity environment="shadow: true; shadowSize: 10; preset:default;"></a-entity>
         </a-scene>
-  </body>
-  <script src="main.js"></script>
+
+        <!-- Code injected by live-server -->
+        <script src="main.js"></script>
+        <a style="display: none;"></a>
+    </body>
 </html>
