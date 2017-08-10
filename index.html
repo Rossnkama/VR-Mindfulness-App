@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+        <a-scene physics>
+            <a-assets>
+                <a-asset-item id="mtl" src="./archModel/Portal N181116.mtl"></a-asset-item>
+                <a-asset-item id="obj" src="./somethingElse/model.obj"></a-asset-item>
+            </a-assets>
+                
+            <a-entity obj-model="obj: #obj; mtl: #mtl;"></a-entity>
+        </a-scene>
+  </body>
+  <script src="main.js"></script>
+</html>
